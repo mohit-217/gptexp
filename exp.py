@@ -1,10 +1,9 @@
 import os
 import openai
-OPENAI_API_KEY1="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"
-OPENAI_API_KEY="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"
+
 class text_generation:
-  def __init__(self):
-    openai.api_key =OPENAI_API_KEY
+  def __init__(self,openai_api_key):
+    openai.api_key =openai_api_key
   def gen_text(self,prompt1):
     response = openai.Completion.create(
     model="text-davinci-003",
